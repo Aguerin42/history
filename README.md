@@ -5,9 +5,9 @@ La bibliothèque _history_ offre des fonctions pour la gestion de l'historique d
 
 ## Fonctionnalités
 
-- [ ] Lire l'historique depuis un fichier
+- [x] Lire l'historique depuis un fichier
 	+ [x] création du fichier si celui-ci n'existe pas
-	+ [ ] création d'une liste à partir de la lecture du fichier
+	+ [x] création d'une liste à partir de la lecture du fichier
 - [ ] Ajout de commandes en fin d'historique
 - [ ] Écriture des modifications dans le fichier
 - [ ] Limitation du nombres de commandes

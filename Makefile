@@ -12,7 +12,7 @@ INC_FILE = history.h
 INC = $(addprefix includes/, $(INC_FILE))
 
 # Sources
-SRC_FILE = open.c
+SRC_FILE = open.c read.c
 SRC = $(addprefix src/, $(SRC_FILE))
 
 # Objets
