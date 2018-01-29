@@ -12,7 +12,7 @@ static int	create_file(char *path)
 {
 	int	fd;
 
-	if ((fd = open(path, O_CREAT)) == -1)
+	if ((fd = open(path, O_RDWR | O_CREAT)) == -1)
 		ft_putendl_fd("open_history: file creation error", 2);
 	return (fd);
 }
