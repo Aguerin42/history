@@ -33,12 +33,7 @@ t_lstag	*read_history(int fd)
 		while (get_next_line(fd, &line) > 0)
 		{
 			ft_putendl_fd(line, 2);
-			if (!history)
-				history = ft_lstagnew(line, ft_strlen(line) + 1);
-			else
-				node = ft_lstagnew(line, ft_strlen(line) + 1);
-			if (node && history)
-				ft_lstagadd(&history, node);
+			history = add_history(history ? history : NULL, line);
 			if (line)
 				ft_strdel(&line);
 		}
