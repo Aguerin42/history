@@ -2,6 +2,8 @@
 **	\file	add.c
 **	\author	Alexis Guérin
 **	\date	29 janvier 2018
+**
+**	\brief	Ajout d'une ligne de commande à l'historique
 */
 
 #include "history.h"

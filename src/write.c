@@ -2,6 +2,8 @@
 **	\file	write.c
 **	\author	Alexis Guérin
 **	\date	29 janvier 2018
+**
+**	\brief	Écriture de l'historique dans le fichier
 */
 
 #include "history.h"

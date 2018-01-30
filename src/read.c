@@ -2,6 +2,8 @@
 **	\file	read.c
 **	\author	Alexis Guérin
 **	\date	29 janvier 2018
+**
+**	\brief	Lecture du fichier d'historique
 */
 
 #include "history.h"
