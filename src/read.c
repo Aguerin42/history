@@ -23,10 +23,8 @@ t_lstag	*read_history(int fd)
 {
 	char	*line;
 	t_lstag	*history;
-	t_lstag	*node;
 
 	history = NULL;
-	node = NULL;
 	line = NULL;
 	if (fd >= 0)
 	{
