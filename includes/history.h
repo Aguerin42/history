@@ -14,7 +14,8 @@
 # include <unistd.h>
 
 t_lstag	*add_history(t_lstag *history, char *line);
-void	delete_history(char *path);
+void	delete_history_file(char *path);
+void	delete_history_list(t_lstag **history);
 int		open_history(char *path);
 t_lstag	*read_history(int fd);
 void	write_history(int fd, t_lstag *history);

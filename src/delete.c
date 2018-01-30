@@ -3,24 +3,45 @@
 **	\author	Alexis Guérin
 **	\date	30 janvier 2018
 **
-**	\brief	Suppression du contenu de l'historique
+**	\brief	Suppression d'historique
 */
 
 #include "history.h"
 
 /**
-**	\brief	Suppression du contenu de l'historique
+**	\brief	Suppression de l'historique dans le fichier
 **
 **	La fonction supprime le contenu du fichier, mais sans supprimer celui-ci.
 **
 **	\param	path	- chemin d'accès au fichier
 */
 
-void	delete_history(char *path)
+void		delete_history_file(char *path)
 {
 	int	fd;
 
 	if (path)
 		if ((fd = open(path, O_TRUNC)) != -1)
 			close(fd);
+}
+
+static void	del(void *content, size_t content_size)
+{
+	(void)content_size;
+	if (content)
+		ft_memdel(&content);
+}
+
+/**
+**	\brief	Suppression de l'historique dans la liste
+**
+**	La fonction supprime la liste et en libère la mémoire.
+**
+**	\param	history	- pointeur sur la tête de liste à supprimer
+*/
+
+void		delete_history_list(t_lstag **history)
+{
+	if (history)
+		ft_lstagdel(history, del);
 }
