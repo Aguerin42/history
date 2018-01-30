@@ -10,6 +10,7 @@ La bibliothèque _history_ offre des fonctions pour la gestion de l'historique d
 	+ [x] création d'une liste à partir de la lecture du fichier
 - [x] Ajout de commandes en début d'historique
 - [x] Écriture des modifications dans le fichier
+- [x] Suppression du contenu de l'historique
 - [ ] Limitation du nombres de commandes
 
 ## Utilisation et compilation
