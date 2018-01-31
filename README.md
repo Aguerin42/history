@@ -29,6 +29,11 @@ La documentation est générée grâce à [Doxygen][]. Le _Makefile_ utilise l'a
 
 	$> make doxygen DOXYGEN=/CHEMIN/VERS/EXECUTABLE/DE/DOXYGEN
 
+## Sources
+
+- [Page manuel de Open](http://manpagesfr.free.fr/man/man2/open.2.html)
+- [StackOverflow - Clear a file](https://stackoverflow.com/a/17272953)
+
 [libft]: https://github.com/aguerin42/libft.git
 [libag]: https://github.com/aguerin42/libag.git
 [Doxygen]: https://github.com/doxygen/doxygen

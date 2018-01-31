@@ -17,7 +17,7 @@ t_lstag	*add_history(t_lstag *history, char *line);
 void	delete_history_file(char *path);
 void	delete_history_list(t_lstag **history);
 int		open_history(char *path);
-t_lstag	*read_history(int fd);
-void	write_history(int fd, t_lstag *history);
+t_lstag	*read_history(char *path);
+void	write_history(char *path, t_lstag *history);
 
 #endif

@@ -28,8 +28,7 @@ static int	open_file(char *path, int perm)
 		flag = O_WRONLY;
 	else
 		flag = O_RDWR;
-	if ((fd = open(path, flag)) == -1)
-		ft_putendl_fd("open_history: incorrect file", 2);
+	fd = open(path, flag | O_APPEND);
 	return (fd);
 }
 
@@ -59,13 +58,9 @@ int			open_history(char *path)
 				perm += 100;
 			if (perm)
 				fd = open_file(path, perm);
-			else
-				ft_putendl_fd("open_history: unable to open the file", 2);
 		}
 		else
 			fd = create_file(path);
 	}
-	else
-		ft_putendl_fd("open_history: the path is empty", 2);
 	return (fd);
 }

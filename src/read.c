@@ -11,21 +11,23 @@
 /**
 **	\brief	Lecture du fichier d'historique
 **
-**	La fonction lit le fichier d'historique grâce au descripteur de fichier
-**	donné en paramètre et retourne une liste créée à partir de celui-ci.
+**	La fonction lit le fichier d'historique du fichier donné en paramètre
+**	et retourne une liste créée à partir de celui-ci.
 **	Chaque maillon de la liste contient une ligne de commande.
 **
-**	\param	fd	- descripteur de fichier de l'historique
+**	\param	path	- chemin d'accès au fichier
 **
 **	\return	**liste** contenant l'historique des commandes ou **NULL** en cas
 **			d'erreur.
 */
 
-t_lstag	*read_history(int fd)
+t_lstag	*read_history(char *path)
 {
+	int		fd;
 	char	*line;
 	t_lstag	*history;
 
+	fd = open_history(path);
 	history = NULL;
 	line = NULL;
 	if (fd >= 0)
@@ -37,6 +39,7 @@ t_lstag	*read_history(int fd)
 			if (line)
 				ft_strdel(&line);
 		}
+		close(fd);
 	}
 	return (history);
 }
