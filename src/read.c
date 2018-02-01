@@ -34,7 +34,6 @@ t_lstag	*read_history(char *path)
 	{
 		while (get_next_line(fd, &line) > 0)
 		{
-			ft_putendl_fd(line, 2);
 			history = add_history_lst(history, line);
 			if (line)
 				ft_strdel(&line);
