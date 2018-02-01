@@ -13,10 +13,12 @@
 # include <fcntl.h>
 # include <unistd.h>
 
-t_lstag	*add_history(t_lstag *history, char *line);
+t_lstag	*add_history_lst(t_lstag *history, char *line);
+t_lstag	*add_history(t_lstag *history, char *path, char *line);
 void	delete_history_file(char *path);
 void	delete_history_list(t_lstag **history);
 int		open_history(char *path);
+void	print_history(t_lstag *history, int nb);
 t_lstag	*read_history(char *path);
 void	write_history(char *path, t_lstag *history);
 

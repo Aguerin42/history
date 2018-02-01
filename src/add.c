@@ -19,11 +19,9 @@ static int	not_empty(char *line)
 	return (0);
 }
 
-static int	verif(t_lstag *node, t_lstag *history, char *line)
+static int	verif(t_lstag *node, char *line)
 {
-	if (((node && !history) ||
-		(node && history && !ft_strequ(node->content, history->content))) &&
-		line[0] && not_empty(line))
+	if (node && line[0] && not_empty(line))
 		return (1);
 	return (0);
 }
@@ -42,7 +40,7 @@ static int	verif(t_lstag *node, t_lstag *history, char *line)
 **			ou **NULL** en cas d'erreur
 */
 
-t_lstag		*add_history(t_lstag *history, char *line)
+t_lstag		*add_history_lst(t_lstag *history, char *line)
 {
 	t_lstag	*node;
 
@@ -51,13 +49,34 @@ t_lstag		*add_history(t_lstag *history, char *line)
 	{
 		if (!(node = ft_lstagnew(line, ft_strlen(line) + 1)))
 			ft_putendl_fd("add_history: allocation error", 2);
-		if (verif(node, history, line))
+		if (verif(node, line))
 		{
 			if (history)
 				ft_lstagadd(&history, node);
 			else
 				history = node;
 		}
+	}
+	return (history);
+}
+
+/**
+**	\brief	Ajout d'une commande dans le fichier et dans la liste
+**
+**	\param	history	- pointeur sur la tête de liste
+**	\param	path	- chemin d'accès au fichier
+**	\param	line	- ligne de commande
+**
+**	\return	tête de liste de **historique** modifié (ou non)
+**			ou **NULL** en cas d'erreur
+*/
+
+t_lstag		*add_history(t_lstag *history, char *path, char *line)
+{
+	if (line && (!history || (history && !ft_strequ(history->content, line))))
+	{
+		history = add_history_lst(history, line);
+		write_history(path, history);
 	}
 	return (history);
 }

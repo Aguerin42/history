@@ -11,6 +11,7 @@ La bibliothèque _history_ offre des fonctions pour la gestion de l'historique d
 - [x] Ajout de commandes en début d'historique
 - [x] Écriture des modifications dans le fichier
 - [x] Suppression du contenu de l'historique
+- [x] Affichage des précédentes commandes
 - [ ] Limitation du nombres de commandes
 
 ## Utilisation et compilation
@@ -33,6 +34,7 @@ La documentation est générée grâce à [Doxygen][]. Le _Makefile_ utilise l'a
 
 - [Page manuel de Open](http://manpagesfr.free.fr/man/man2/open.2.html)
 - [StackOverflow - Clear a file](https://stackoverflow.com/a/17272953)
+- [Linux France - Man de Bash : HISTORIQUE](http://www.linux-france.org/article/man-fr/man1/bash-1.html)
 
 [libft]: https://github.com/aguerin42/libft.git
 [libag]: https://github.com/aguerin42/libag.git
