@@ -73,7 +73,7 @@ t_lstag		*add_history_lst(t_lstag *history, char *line)
 
 t_lstag		*add_history(t_lstag *history, char *path, char *line)
 {
-	if (line && (!history || (history && !ft_strequ(history->content, line))))
+	if (line && (!history || !ft_strequ(history->content, line)))
 	{
 		history = add_history_lst(history, line);
 		write_history(path, history);
