@@ -27,7 +27,7 @@ static t_lstag	*search(t_lstag *lst, char *command)
 		if (ft_strnequ(lst->content, command, ft_strlen(command))
 			&& verif(new_list, lst))
 		{
-			new_elem = ft_lstagnew(lst->content, sizeof(char*) + 1);
+			new_elem = ft_lstagnew(lst->content, lst->content_size);
 			if (!new_list)
 				new_list = new_elem;
 			else
