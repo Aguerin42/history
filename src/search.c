@@ -10,7 +10,7 @@ static int		verif(t_lstag *new, t_lstag *lst)
 {
 	t_lstag	*tailnew;
 
-	tailnew = ft_lstagtail(new);
+	tailnew = ag_lsttail(new);
 	if (!tailnew || !ft_strequ(lst->content, tailnew->content))
 		return (1);
 	return (0);
@@ -27,11 +27,11 @@ static t_lstag	*search(t_lstag *lst, char *command)
 		if (ft_strnequ(lst->content, command, ft_strlen(command))
 			&& verif(new_list, lst))
 		{
-			new_elem = ft_lstagnew(lst->content, lst->content_size);
+			new_elem = ag_lstnew(lst->content, lst->content_size);
 			if (!new_list)
 				new_list = new_elem;
 			else
-				ft_lstagaddtail(&new_list, new_elem);
+				ag_lstaddtail(&new_list, new_elem);
 		}
 		lst = lst->next;
 	}

@@ -43,5 +43,5 @@ static void	del(void *content, size_t content_size)
 void		delete_history_list(t_lstag **history)
 {
 	if (history)
-		ft_lstagdel(history, del);
+		ag_lstdel(history, del);
 }

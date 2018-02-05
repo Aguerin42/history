@@ -12,7 +12,7 @@ static int	not_empty(char *line)
 {
 	while (*line)
 	{
-		if (!ft_isspace(line[0]))
+		if (!ag_isspace(line[0]))
 			return (1);
 		line++;
 	}
@@ -47,12 +47,12 @@ t_lstag		*add_history_lst(t_lstag *history, char *line)
 	node = NULL;
 	if (line)
 	{
-		if (!(node = ft_lstagnew(line, ft_strlen(line) + 1)))
+		if (!(node = ag_lstnew(line, ft_strlen(line) + 1)))
 			ft_putendl_fd("add_history: allocation error", 2);
 		if (verif(node, line))
 		{
 			if (history)
-				ft_lstagadd(&history, node);
+				ag_lstadd(&history, node);
 			else
 				history = node;
 		}

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   print.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: aguerin <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/01 10:13:40 by aguerin           #+#    #+#             */
-/*   Updated: 2018/02/01 10:22:05 by aguerin          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 /**
 **	\file	print.c
 **	\author	Alexis Guérin
@@ -27,8 +15,8 @@ static void		print(t_lstag *history, int nb, int len)
 	i = len;
 	while (history && i--)
 	{
-		ft_putxchar(' ', 5 - ft_nbrlen(len - --nb));
-		ft_putnbrs(len - nb);
+		ag_putxchar(' ', 5 - ag_nbrlen(len - --nb));
+		ag_putnbrs(len - nb);
 		ft_putendl(history->content);
 		history = history->prev;
 	}
@@ -58,12 +46,12 @@ void			print_history(t_lstag *history, int nb)
 
 	if (history)
 	{
-		len = ft_lstagcountelem(history);
+		len = ag_lstcountelem(history);
 		if (nb >= 0 && nb < len)
 			history = find_node(history, nb);
 		else
 		{
-			history = ft_lstagtail(history);
+			history = ag_lsttail(history);
 			nb = len;
 		}
 		print(history, nb, len);
