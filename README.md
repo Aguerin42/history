@@ -19,7 +19,7 @@ La bibliothèque _history_ offre des fonctions pour la gestion de l'historique d
 
 ## Utilisation et compilation
 
-_history_ utilise des fonctions de la [libft][] et de la [libag][] et a besoin de leurs headers pour pouvoir être compilé. Il faut fournir au _Makefile_ le chemin vers les dossiers les contenant à l'aide de la variable *LIBFT_INC* et *LIBAG_INC*.
+_history_ utilise des fonctions de la [libft][] et de la [libag][] et a besoin de leurs headers pour pouvoir être compilé. Il faut fournir au _Makefile_ le chemin vers les dossiers les contenant à l'aide des variables *LIBFT_INC* et *LIBAG_INC*.
 
 	$> make LIBFT_INC=../libft/includes LIBAG_INC=../libag/includes all
 
@@ -38,6 +38,7 @@ La documentation est générée grâce à [Doxygen][]. Le _Makefile_ utilise l'a
 - [Page manuel de Open](http://manpagesfr.free.fr/man/man2/open.2.html)
 - [StackOverflow - Clear a file](https://stackoverflow.com/a/17272953)
 - [Linux France - Man de Bash : Historique](http://www.linux-france.org/article/man-fr/man1/bash-1.html)
+- [StackOverflow - Exclamation mark in Bash](https://unix.stackexchange.com/questions/3747/understanding-the-exclamation-mark-in-bash/)
 
 [libft]: https://github.com/aguerin42/libft.git
 [libag]: https://github.com/aguerin42/libag.git
