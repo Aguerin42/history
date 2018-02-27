@@ -21,6 +21,7 @@ int		open_history(char *path);
 void	print_history(t_lstag *history, int nb);
 t_lstag	*read_history(char *path);
 t_lstag	*search_history_begin(t_lstag *history, char *command);
+char	*search_history_content(t_lstag *history, const char *pattern);
 void	write_history(char *path, t_lstag *history);
 
 #endif

@@ -1,5 +1,5 @@
 /**
-**	\file	search.c
+**	\file	search_begin.c
 **	\author	Alexis Guérin
 **	\date	1 février 2018
 */
@@ -59,4 +59,4 @@ t_lstag			*search_history_begin(t_lstag *history, char *command)
 	if (command)
 		list = search(history, command);
 	return (list);
-	}
+}
