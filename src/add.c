@@ -56,6 +56,8 @@ t_lstag		*add_history_lst(t_lstag *history, char *line)
 			else
 				history = node;
 		}
+		else if (node)
+			delete_history_list(&node);
 	}
 	return (history);
 }
