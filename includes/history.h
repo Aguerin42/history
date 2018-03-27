@@ -9,6 +9,7 @@
 
 # include "libft.h"
 # include "libag.h"
+# include "liberror.h"
 # include "get_next_line.h"
 # include <fcntl.h>
 # include <unistd.h>

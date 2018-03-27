@@ -48,7 +48,7 @@ t_lstag		*add_history_lst(t_lstag *history, char *line)
 	if (line)
 	{
 		if (!(node = ag_lstnew(line, ft_strlen(line) + 1)))
-			ft_putendl_fd("add_history: allocation error", 2);
+			sh_error(1, "history: add_history");
 		if (verif(node, line))
 		{
 			if (history)

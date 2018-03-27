@@ -5,7 +5,7 @@ PROJECT = history
 # Options de compilation
 CC = @gcc
 CFLAGS = -Wall -Werror -Wextra
-CPPFLAGS = -I includes/ -I $(LIBAG_INC) -I $(LIBFT_INC)
+CPPFLAGS = -I includes/ -I $(LIBAG_INC) -I $(LIBFT_INC) -I $(ERROR_INC)
 
 # Headers
 INC_FILE = history.h
