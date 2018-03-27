@@ -13,7 +13,7 @@ static int	create_file(char *path)
 	int	fd;
 
 	if ((fd = open(path, O_RDWR | O_CREAT, S_IRUSR + S_IWUSR)) == -1)
-		sh_error(5, "history: open_history", 2);
+		sh_error(5, "history: open_history");
 	return (fd);
 }
 
