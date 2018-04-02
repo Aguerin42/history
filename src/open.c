@@ -1,4 +1,16 @@
-/**
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   open.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/02 10:33:24 by aguerin           #+#    #+#             */
+/*   Updated: 2018/04/02 10:33:36 by aguerin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 **	\file	open.c
 **	\author	Alexis Guérin
 **	\date	29 janvier 2018
@@ -32,7 +44,7 @@ static int	open_file(char *path, int perm)
 	return (fd);
 }
 
-/**
+/*
 **	\brief	Ouverture du fichier d'historique
 **
 **	\param	path	- chemin d'accès au fichier

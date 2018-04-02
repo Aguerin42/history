@@ -1,4 +1,16 @@
-/**
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   add.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/02 10:32:44 by aguerin           #+#    #+#             */
+/*   Updated: 2018/04/02 10:32:55 by aguerin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 **	\file	add.c
 **	\author	Alexis Guérin
 **	\date	29 janvier 2018
@@ -26,7 +38,7 @@ static int	verif(t_lstag *node, char *line)
 	return (0);
 }
 
-/**
+/*
 **	\brief	Ajout d'une ligne de commande à l'historique
 **
 **	La fonction ajoute la ligne de commande reçue en début d'historique.
@@ -62,7 +74,7 @@ t_lstag		*add_history_lst(t_lstag *history, char *line)
 	return (history);
 }
 
-/**
+/*
 **	\brief	Ajout d'une commande dans le fichier et dans la liste
 **
 **	\param	history	- pointeur sur la tête de liste

@@ -1,4 +1,16 @@
-/**
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/02 10:33:54 by aguerin           #+#    #+#             */
+/*   Updated: 2018/04/02 10:34:04 by aguerin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 **	\file	read.c
 **	\author	Alexis Guérin
 **	\date	29 janvier 2018
@@ -8,7 +20,7 @@
 
 #include "history.h"
 
-/**
+/*
 **	\brief	Lecture du fichier d'historique
 **
 **	La fonction lit le fichier d'historique du fichier donné en paramètre

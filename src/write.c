@@ -1,4 +1,16 @@
-/**
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   write.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/02 10:34:37 by aguerin           #+#    #+#             */
+/*   Updated: 2018/04/02 10:34:46 by aguerin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 **	\file	write.c
 **	\author	Alexis Guérin
 **	\date	29 janvier 2018
@@ -8,7 +20,7 @@
 
 #include "history.h"
 
-/**
+/*
 **	\brief	Écriture de l'historique dans le fichier
 **
 **	La fonction parcourt la liste contenant l'historique et écrit celui-ci

@@ -1,4 +1,16 @@
-/**
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   search_begin.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/02 10:34:08 by aguerin           #+#    #+#             */
+/*   Updated: 2018/04/02 10:34:19 by aguerin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 **	\file	search_begin.c
 **	\author	Alexis Guérin
 **	\date	1 février 2018
@@ -38,7 +50,7 @@ static t_lstag	*search(t_lstag *lst, char *command)
 	return (new_list);
 }
 
-/**
+/*
 **	\brief	Recherche de commande
 **
 **	Renvoie une liste composée des commandes identiques ou dont le début

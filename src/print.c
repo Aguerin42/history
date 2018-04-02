@@ -1,4 +1,16 @@
-/**
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/02 10:33:41 by aguerin           #+#    #+#             */
+/*   Updated: 2018/04/02 10:33:51 by aguerin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 **	\file	print.c
 **	\author	Alexis Guérin
 **	\date	31 janvier 2018
@@ -29,7 +41,7 @@ static t_lstag	*find_node(t_lstag *history, int nb)
 	return (history);
 }
 
-/**
+/*
 **	\brief	Affichage du contenu de l'historique
 **
 **	La fonction affiche les préédentes commandes, précédées d'un numéro de

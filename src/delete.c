@@ -1,4 +1,16 @@
-/**
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   delete.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/02 10:33:00 by aguerin           #+#    #+#             */
+/*   Updated: 2018/04/02 10:33:20 by aguerin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 **	\file	delete.c
 **	\author	Alexis Guérin
 **	\date	30 janvier 2018
@@ -8,7 +20,7 @@
 
 #include "history.h"
 
-/**
+/*
 **	\brief	Suppression de l'historique dans le fichier
 **
 **	La fonction supprime le contenu du fichier, mais sans supprimer celui-ci.
@@ -32,7 +44,7 @@ static void	del(void *content, size_t content_size)
 		ft_memdel(&content);
 }
 
-/**
+/*
 **	\brief	Suppression de l'historique dans la liste
 **
 **	La fonction supprime la liste et en libère la mémoire.

@@ -1,4 +1,16 @@
-/**
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   search_content.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/04/02 10:34:24 by aguerin           #+#    #+#             */
+/*   Updated: 2018/04/02 10:34:33 by aguerin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 **	\file	search_content.c
 **	\author	Alexis Guérin
 **	\date	23 février 2018
@@ -6,7 +18,7 @@
 
 #include "history.h"
 
-/**
+/*
 **	\brief	Recherche dans le contenu d'une commande
 **
 **	Recherche un motif dans le contenu d'une commande de l'historique
