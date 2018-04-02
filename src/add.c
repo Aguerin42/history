@@ -6,7 +6,7 @@
 /*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 10:32:44 by aguerin           #+#    #+#             */
-/*   Updated: 2018/04/02 10:32:55 by aguerin          ###   ########.fr       */
+/*   Updated: 2018/04/02 14:48:13 by aguerin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ t_lstag		*add_history_lst(t_lstag *history, char *line)
 	if (line)
 	{
 		if (!(node = ag_lstnew(line, ft_strlen(line) + 1)))
-			sh_error(1, "history: add_history");
+			sh_error(1, "in function history: add_history");
 		if (verif(node, line))
 		{
 			if (history)

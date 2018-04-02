@@ -6,7 +6,7 @@
 /*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 10:33:24 by aguerin           #+#    #+#             */
-/*   Updated: 2018/04/02 10:33:36 by aguerin          ###   ########.fr       */
+/*   Updated: 2018/04/02 14:48:31 by aguerin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	create_file(char *path)
 	int	fd;
 
 	if ((fd = open(path, O_RDWR | O_CREAT, S_IRUSR + S_IWUSR)) == -1)
-		sh_error(5, "history: open_history");
+		sh_error(5, "in function history: open_history");
 	return (fd);
 }
 
