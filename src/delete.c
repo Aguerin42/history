@@ -28,7 +28,7 @@
 **	\param	path	- chemin d'accès au fichier
 */
 
-void		delete_history_file(char *path)
+void		delete_history_file_content(char *path)
 {
 	int	fd;
 
