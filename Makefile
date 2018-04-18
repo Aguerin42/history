@@ -21,7 +21,7 @@ OBJ = $(SRC:.c=.o)
 # Règles
 all: $(NAME)
 
-$(NAME) : Makefile $(LIBAG_INC) $(LIBFT_INC) $(OBJ)
+$(NAME) : Makefile $(LIBAG_INC) $(LIBFT_INC) $(ERROR_INC) $(OBJ)
 	@echo "$(MAGEN)Création de la bibliothèque $(NAME)"
 	@ar rc $(NAME) $(OBJ)
 	@echo "Création de l'index pour $(NAME)$(RESET)"
