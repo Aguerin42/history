@@ -6,7 +6,7 @@
 /*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 10:32:26 by aguerin           #+#    #+#             */
-/*   Updated: 2018/04/02 10:32:36 by aguerin          ###   ########.fr       */
+/*   Updated: 2018/04/18 15:43:33 by aguerin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include <fcntl.h>
 # include <unistd.h>
 
+int		not_empty(char *line);
 t_lstag	*add_history_lst(t_lstag *history, char *line);
 t_lstag	*add_history(t_lstag *history, char *path, char *line);
 void	delete_history_file_content(char *path);
