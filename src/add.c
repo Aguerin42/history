@@ -6,7 +6,7 @@
 /*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 10:32:44 by aguerin           #+#    #+#             */
-/*   Updated: 2018/04/02 14:48:13 by aguerin          ###   ########.fr       */
+/*   Updated: 2018/04/18 15:34:14 by aguerin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 #include "history.h"
 
-static int	not_empty(char *line)
+int			not_empty(char *line)
 {
 	while (*line)
 	{
@@ -75,6 +75,19 @@ t_lstag		*add_history_lst(t_lstag *history, char *line)
 }
 
 /*
+**	\brief	Suppression des retours à la ligne dans la commande
+**
+**	Les retours à la ligne sont remplacés par des espaces
+*/
+
+static void	clean_line(char *line)
+{
+	if (line)
+		if (line[0] == '\n')
+			line[0] = ' ';
+}
+
+/*
 **	\brief	Ajout d'une commande dans le fichier et dans la liste
 **
 **	\param	history	- pointeur sur la tête de liste
@@ -87,10 +100,24 @@ t_lstag		*add_history_lst(t_lstag *history, char *line)
 
 t_lstag		*add_history(t_lstag *history, char *path, char *line)
 {
+	char	*tmp;
+
 	if (line && (!history || !ft_strequ(history->content, line)))
 	{
+		tmp = NULL;
+		if (ft_strchr(line, '\n'))
+		{
+			if (!(tmp = ft_strdup(line)))
+			{
+				sh_error(1, "in add_history function");
+				return (history);
+			}
+			ft_striter(tmp, clean_line);
+			line = tmp;
+		}
 		history = add_history_lst(history, line);
 		write_history(path, history);
+		tmp ? ft_strdel(&tmp) : NULL;
 	}
 	return (history);
 }
