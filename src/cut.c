@@ -4,27 +4,24 @@ int	cut_history(t_lstag **history, char *file)
 {
 	unsigned int	i;
 	t_lstag			*list;
-	t_lstag			*head;
 
 	if (history)
 	{
-		if ((i = ag_lstcountelem(*history)) > 10)
+		if (ag_lstcountelem(*history) > 10000)
 		{
 			list = *history;
-			head = list;
 			i = 0;
-			while (list && i++ < 10)
+			while (list && ++i < 10000)
 				list = list->next;
 			if (list)
 			{
-				*history = head;
-				head = list;
-				head->next = NULL;
-				delete_history_list(&list);
+				if (list->next)
+					delete_history_list(&list->next);
+				list->next = NULL;
 				if (file)
 				{
 					delete_history_file_content(file);
-					write_history(file, *history);
+					write_history(file, list);
 				}
 			}
 		}
