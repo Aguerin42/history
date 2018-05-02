@@ -6,7 +6,7 @@
 /*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 10:33:54 by aguerin           #+#    #+#             */
-/*   Updated: 2018/04/02 10:34:04 by aguerin          ###   ########.fr       */
+/*   Updated: 2018/05/02 08:59:32 by aguerin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,27 @@
 t_lstag	*read_history(char *path, t_lstag *history)
 {
 	int		fd;
+	int		i;
 	char	*line;
 	t_lstag	*h;
 
 	fd = open_history(path);
 	h = history;
 	line = NULL;
+	i = 0;
 	if (fd >= 0)
 	{
-		while (get_next_line(fd, &line) > 0)
+		while (get_next_line(fd, &line) > 0 && i < 300000)
 		{
+			i++;
 			h = add_history_lst(h, line);
 			if (line)
 				ft_strdel(&line);
 		}
+		if (i >= 300000)
+			ft_putendl_fd("history: HISTFILE is too big. Calm down please.", 2);
+		if (h)
+			cut_history(h, NULL);
 		close(fd);
 	}
 	return (h);

@@ -1,15 +1,15 @@
 #include "history.h"
 
-int	cut_history(t_lstag **history, char *file)
+int	cut_history(t_lstag *history, char *file)
 {
 	unsigned int	i;
 	t_lstag			*list;
 
 	if (history)
 	{
-		if (ag_lstcountelem(*history) > 10000)
+		if (ag_lstcountelem(history) > 10000)
 		{
-			list = *history;
+			list = history;
 			i = 0;
 			while (list && ++i < 10000)
 				list = list->next;

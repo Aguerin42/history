@@ -6,7 +6,7 @@
 /*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 10:32:44 by aguerin           #+#    #+#             */
-/*   Updated: 2018/04/18 15:34:14 by aguerin          ###   ########.fr       */
+/*   Updated: 2018/05/02 08:41:53 by aguerin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ t_lstag		*add_history(t_lstag *history, char *path, char *line)
 		}
 		history = add_history_lst(history, line);
 		write_history(path, history);
+		cut_history(history, path);
 		tmp ? ft_strdel(&tmp) : NULL;
 	}
 	return (history);

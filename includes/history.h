@@ -6,7 +6,7 @@
 /*   By: aguerin <aguerin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 10:32:26 by aguerin           #+#    #+#             */
-/*   Updated: 2018/05/01 21:30:20 by aguerin          ###   ########.fr       */
+/*   Updated: 2018/05/02 08:40:16 by aguerin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 int		not_empty(char *line);
 t_lstag	*add_history_lst(t_lstag *history, char *line);
 t_lstag	*add_history(t_lstag *history, char *path, char *line);
-int		cut_history(t_lstag **history, char *path);
+int		cut_history(t_lstag *history, char *path);
 void	delete_history_file_content(char *path);
 void	delete_history_list(t_lstag **history);
 int		open_history(char *path);
