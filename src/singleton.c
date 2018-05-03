@@ -12,8 +12,8 @@
 **
 **	\param	history	- pointeur sur la tête de liste
 **
-**	\return	**tête de liste** de l'historique ou **NULL** si celui-ci n'existe pas
-**			ou que le pointeur n'a pas été initialisé
+**	\return	**tête de liste** de l'historique ou **NULL** si celui-ci n'existe
+** pas ou que le pointeur n'a pas été initialisé
 */
 
 t_lstag		**get_history(t_lstag **history)

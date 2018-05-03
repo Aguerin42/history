@@ -22,7 +22,7 @@
 **			d'erreur.
 */
 
-t_lstag	*read_history(char *path, t_lstag *history)
+t_lstag			*read_history(char *path, t_lstag *history)
 {
 	int		fd;
 	int		i;
@@ -42,12 +42,10 @@ t_lstag	*read_history(char *path, t_lstag *history)
 			if (line)
 				ft_strdel(&line);
 		}
-		if (line)
-			ft_strdel(&line);
+		line ? ft_strdel(&line) : NULL;
 		if (i >= 200000)
 			ft_putendl_fd("history: the file is too big. Calm down please.", 2);
-		if (h)
-			cut_history(h, NULL);
+		h ? cut_history(h, NULL) : 0;
 		close(fd);
 	}
 	return (h);
