@@ -24,4 +24,3 @@ t_lstag		**get_history(t_lstag **history)
 		h = history;
 	return (h);
 }
-
