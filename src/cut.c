@@ -1,6 +1,6 @@
 #include "history.h"
 
-int	cut_history(t_lstag *history, char *file)
+int		cut_history(t_lstag *history, char *file)
 {
 	unsigned int	i;
 	t_lstag			*list;
